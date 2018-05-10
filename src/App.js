@@ -1,32 +1,19 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 
+import RouteContainer from './RouteContainer';
 import Header from './Header';
 
-
-const SceneContainer = (component) => <div><component/></div>;
-
-const Main = () => <h3>Main</h3>
-const First = () => <h3>First</h3>
-const Second = () => <h3>Second</h3>
-
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Router>
+        <Router>  
           <Fragment>
             <Header />
-            <main className="app-main">
-              <h2>this is the main section</h2>
-              <Switch>
-                <Route exact path="/" component={Main}/>
-                <Route path="/first" component={First}/>
-                <Route path="/second" component={Second}/>
-              </Switch>
-            </main>
+            <RouteContainer />
           </Fragment>
         </Router>
       </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-
-
 const Header = () => 
     <header className="app-header">
         <h1 className="app-title">This is a dumb Header</h1>
@@ -19,4 +17,4 @@ const Header = () =>
         </ul>
     </header>
 
-export default Header;
+export default Header;  
